@@ -33,7 +33,6 @@ animation: rectanle 10s linear alternate infinite;
 
 @keyframes rectanle {
     to{
-
         transform: translate(90vw,-90vh)
     }
 }

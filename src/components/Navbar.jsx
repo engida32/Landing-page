@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 const Container = styled.div`
- height: 56px;
+ height: 60px;
  `
 const Wrapper = styled.div`
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +30,7 @@ font-weight: inherit;
 
 const Logo = styled.div`
 font-weight: italic;
+font-family: 'Playfair Display';
 font-size: 37px;
 text-decoration: underline blueviolet;
 `

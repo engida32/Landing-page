@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import AnimatedShape from './AnimatedShape'
- import mac from '../asset/img/mac.jpg'
+import mac from '../asset/img/mac.jpg'
+import desktop from '../asset/img/pc-desktop.jpg'
 const Container = styled.div`
     height:calc( 100vh - 60px);
     display:flex`
@@ -61,12 +62,14 @@ align-items: center;
 `
 
 const Image = styled.img`
-border-bottom-left-radius:12%;
-border-top-left-radius: 22%;
+background: linear-gradient(crimson, pink);
+
+border-bottom-left-radius:22%;
+border-top-left-radius: 14%;
 background-color: white;
 align-content: center;
 align-items: center;
-width:100%;
+width:99%;
 height: 100%;
 `
 
@@ -95,7 +98,7 @@ const Main = () => {
 
 
             </Left>
-            <Right><Image src={mac} />
+            <Right><Image src={desktop} />
             </Right>
             <AnimatedShape />
         </Container>
