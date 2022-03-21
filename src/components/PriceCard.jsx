@@ -43,23 +43,26 @@ padding:15px;
 cursor: pointer;
 font-weight: bold;
 `
+
 const PriceCard = ({ price, type }) => {
     return (
-        <Container>
-            <PriceContainer>
-                $<Price>{price}</Price><b>/month</b>
-            </PriceContainer>
-            <Type>{type} Plan</Type>
-            <List>
-                <ListItem>200 Hand crafted Template</ListItem>
-                <ListItem>Exclusive Support</ListItem>
-                <ListItem>50+ Prebuilt  Website </ListItem>
-                <ListItem>Premium Plugin </ListItem>
-            </List>
-            <Button> Join Now</Button>
+        <>
+            <Container>
 
-        </Container>
-    )
+                <PriceContainer>
+                    $<Price>{price}</Price><b>/month</b>
+                </PriceContainer>
+                <Type>{type} Plan</Type>
+                <List>
+                    <ListItem>200 Hand crafted Template</ListItem>
+                    <ListItem>Exclusive Support</ListItem>
+                    <ListItem>50+ Prebuilt  Website </ListItem>
+                    <ListItem>Premium Plugin </ListItem>
+                </List>
+                <Button> Join Now</Button>
+
+            </Container>
+        </>)
 }
 
 export default PriceCard
