@@ -5,8 +5,8 @@ import play from '../asset/play.png'
 import send from '../asset/send.png'
 import phone from '../asset/phone.png'
 const Container = styled.div`
-height: 50%;    ;
-background-image: url('https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+height: 90%;    ;
+background-image: url('https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?t=st=1647859942~exp=1647860542~hmac=2f655f1264b54a2833b61a89db5ce09edcc7e861b78a75e51ec1332495831cf5&w=1380');
 `
 const Wrapper = styled.div`
   height: 100%;
