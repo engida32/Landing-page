@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import phone from '../asset/img/earphone.jpg'
-import desktop2 from '../asset/img/678.jpg'
+import desktop2 from '../asset/img/mac.jpg'
+import AnimatedShape from './AnimatedShape';
 const Container = styled.div`
 display:flex;
 `
@@ -15,14 +16,13 @@ const Right = styled.div`
   justify-content: center;
  `
 const Image = styled.img`
-padding: 28px;
+padding-top:12px;
  width: 624px;
+ height: 700px;
  border-radius: 21px;
- background-repeat: no-repeat;
  border-color: inherit;
-   background: linear-gradient(crimson, pink);
-
-  `
+background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%);
+ `
 const Title = styled.span`
 font-size: 70px;
 `
@@ -71,6 +71,7 @@ const Feature = () => {
         <Description>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur porro aperiam minus necessitatibus odio sapiente, obcaecati quia accusantium culpa veritatis.</Description>
         <Button>Learn More</Button>
       </Right>
+      <AnimatedShape />
     </Container>
 
 
