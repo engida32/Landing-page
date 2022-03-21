@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import PriceCard from './PriceCard'
+import React from 'react';
+import styled from 'styled-components';
+import PriceCard from './PriceCard';
 
 const Container = styled.div`
  height: 90%;
@@ -12,7 +12,7 @@ const Container = styled.div`
    height:70%
 
 }
-`
+`;
 const Price = () => {
     return (
         <Container>
@@ -20,7 +20,7 @@ const Price = () => {
             <PriceCard price='20' type='Premium' />
             <PriceCard price='30' type='Advanced' />
         </Container>
-    )
-}
+    );
+};
 
-export default Price
+export default Price;

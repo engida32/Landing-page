@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 const Square = styled.div`
 width: 60px;
 overflow: hidden;
@@ -18,7 +18,7 @@ animation: square 5s linear alternate infinite;
         transform: translate(100vw,100vh)
     }
 }
-`
+`;
 const Rect = styled.div`
 width: 60px;
 height: 60px;
@@ -37,7 +37,7 @@ animation: rectanle 10s linear alternate infinite;
     }
 }
 overflow: hidden;
-`
+`;
 const Circle = styled.div`
 
 width: 60px;
@@ -58,7 +58,7 @@ animation: circle 10s linear alternate infinite;
     }
 }
 overflow: hidden;
- `
+ `;
 const AnimatedShape = () => {
     return (<>
         <Square />
@@ -66,7 +66,7 @@ const AnimatedShape = () => {
         <Rect />
 
     </>
-    )
-}
+    );
+};
 
-export default AnimatedShape
+export default AnimatedShape;

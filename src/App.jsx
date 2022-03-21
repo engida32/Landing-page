@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import styled from 'styled-components';
@@ -39,6 +40,7 @@ const ServiceShape = styled.div`
   clip-path: polygon(0 0, 33% 0%, 33% 100%, 0 100%);
   /* height: 40%; */
   background-color: pink;
+  display: none;
 `;
 const PriceShape = styled.div`
   ${Shape}
@@ -51,7 +53,7 @@ color: darkblue;
 padding-left: 201px;
   text-decoration: solid underline cadetblue 8px;
   color: crimson;
-`
+`;
 
 const smallScreen = window.screen.width <= 480 ? true : false;
 function App() {

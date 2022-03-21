@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
 margin-right: 50px;
@@ -18,18 +19,18 @@ padding: 10px;
 height: 80%;
 
 }
-`
+`;
 const PriceContainer = styled.div`
 display: flex;
 align-items: center;
-`
+`;
 const Price = styled.span`
 font-weight: bold;
 font-size: 50px;
 @media only screen and (max-width:480px) {
 font-size:20px
 }
-`
+`;
 const Type = styled.button`
 padding: 10px;
 margin: 10px;
@@ -41,10 +42,10 @@ border-radius:20px;
   display: none;
 
 }
-`
+`;
 const List = styled.ul`
 list-style: none;
-`
+`;
 const ListItem = styled.li`
 margin: 30px 0;
 @media only screen and (max-width:480px) {
@@ -52,7 +53,7 @@ margin: 30px 0;
    font-size: 10px;
 
 }
-`
+`;
 const Button = styled.button`
 border: none ;
 background-color: darkblue;
@@ -67,7 +68,7 @@ font-weight: bold;
    padding: 8px;
 
 }
-`
+`;
 
 const PriceCard = ({ price, type }) => {
     return (
@@ -87,7 +88,7 @@ const PriceCard = ({ price, type }) => {
                 <Button> Join Now</Button>
 
             </Container>
-        </>)
-}
+        </>);
+};
 
-export default PriceCard
+export default PriceCard;

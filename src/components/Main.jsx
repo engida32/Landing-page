@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import AnimatedShape from './AnimatedShape'
-import mac from '../asset/img/mac.jpg'
-import desktop from '../asset/img/pc-desktop.jpg'
+/* eslint-disable react/react-in-jsx-scope */
+import styled from 'styled-components';
+import AnimatedShape from './AnimatedShape';
+import desktop from '../asset/img/pc-desktop.jpg';
 const Container = styled.div`
     height:calc( 100vh - 60px);
     display:flex;
 @media only screen and (max-width:480px) {
 flex-direction: column;
 }
-    `
+    `;
 const Left = styled.div`
 width:60%;
 display: flex;
@@ -19,7 +19,7 @@ justify-content: center;
 width: 100%;
 height: 100%;
 }
-`
+`;
 const Title = styled.h1`
 width: 60%;
 font-size: 60px;
@@ -28,7 +28,7 @@ font-size: 60px;
     width: 100%;
 
 }
-`
+`;
 const Description = styled.p`
 margin-top: 20px;
 width: 60%;
@@ -39,7 +39,7 @@ display:flex;
     width: 100%;
 
 }
-`
+`;
 const Info = styled.div`
 width:60%;
 display:flex;
@@ -53,7 +53,7 @@ margin-top: 50px;
 
 }
 
-`
+`;
 const Button = styled.button`
 width: 150px;
 height: 80px;
@@ -69,20 +69,20 @@ color: black;
    margin-bottom:20px;
 
 }
-`
+`;
 const Contact = styled.div`
 display:flex;
-flex-direction:column`
+flex-direction:column`;
 const Phone = styled.span`
 font-weight: bold;
 color:black;
 text-decoration: underline blue;
 font-size: 22px;
 color: green;
-`
+`;
 const ContactText = styled.span`
 color:rebeccapurple;
-margin-top: 5px;`
+margin-top: 5px;`;
 const Right = styled.div`
 width:60%;
 align-content: center;
@@ -90,7 +90,7 @@ align-items: center;
 @media only screen and (max-width:480px) {
     display:none;
 }
-`
+`;
 
 const Image = styled.img`
 background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #eba08b 100%);
@@ -101,7 +101,7 @@ align-content: center;
 align-items: center;
 width:99%;
 height: 100%;
-`
+`;
 
 
 
@@ -134,6 +134,6 @@ const Main = () => {
         </Container>
 
 
-    )
-}
+    );
+};
 export default Main;

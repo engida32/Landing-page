@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import map from '../asset/map.png'
-import send from '../asset/send.png'
-import phone from '../asset/phone.png'
+import React from 'react';
+import styled from 'styled-components';
+import map from '../asset/map.png';
+import send from '../asset/send.png';
+import phone from '../asset/phone.png';
 const Container = styled.div`
 height: 90%;    ;
 background-image: url('https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?t=st=1647859942~exp=1647860542~hmac=2f655f1264b54a2833b61a89db5ce09edcc7e861b78a75e51ec1332495831cf5&w=1380');
-`
+`;
 const Wrapper = styled.div`
   height: 100%;
   padding: 20px;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 }
 
-`
+`;
 
 
 const Form = styled.form`
@@ -31,7 +31,7 @@ const Form = styled.form`
    /* margin: 10px; */
 
 }
-`
+`;
 const LeftForm = styled.div`
 height: 100%;
   display: flex;
@@ -43,7 +43,7 @@ height: 100%;
    margin-right:0px
 
 }
-`
+`;
 const RightFotm = styled.div`
 
   height: 100%;
@@ -54,7 +54,7 @@ const RightFotm = styled.div`
    height: 50%;
 
 }
-`
+`;
 const Input = styled.input`
   width: 200px;
   padding: 20px;
@@ -64,7 +64,7 @@ const Input = styled.input`
    padding: 5px;
 
 }
-`
+`;
 const TextArea = styled.textarea`
  width: 200px;
   height: 60%;
@@ -74,7 +74,7 @@ margin-top: 20px;
 
 }
 
-`
+`;
 const Button = styled.button`
   border: none;
   padding: 15px;
@@ -84,19 +84,19 @@ const Button = styled.button`
   border-radius: 10px;
   margin-top: 20px;
   cursor: pointer;
-      @media only screen and (max-width:480px) {
-padding: 5px;
-font-size: 14px;
+   @media only screen and (max-width:480px) {
+    padding: 5px;
+    font-size: 14px;
 
 }
-`
+`;
 const Title = styled.h1`
 margin-top: 0px;
 margin: 50px;
 @media only screen and (max-width:480px) {
 margin: 30px;
 }
-`
+`;
 const AddressContainer = styled.div`
  width: 50%;
 display: flex;
@@ -108,7 +108,7 @@ margin-top: 20px;
 
 
 }
-`
+`;
 
 const FormContainer = styled.div`
 width: 50%;
@@ -122,7 +122,7 @@ flex-direction: column;
 
 }
 
-`
+`;
 const AddresItem = styled.div`
 display: flex;
 align-items: center;
@@ -131,7 +131,7 @@ margin-bottom: 50px;
 margin-bottom: 0px;
 margin-top: 56px;
 }
-`
+`;
 const Icon = styled.img`
 width: 30px;
 padding: 10px;
@@ -141,7 +141,7 @@ padding: 10px;
 
 }
 
-`
+`;
 const Text = styled.span`
 font-size: 20px;
 font-style: italic;
@@ -152,7 +152,7 @@ font-size: 12px;
 
 }
 
-`
+`;
 const Contact = () => {
     return (
         <Container>
@@ -192,7 +192,7 @@ const Contact = () => {
             </Wrapper>
 
         </Container>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
