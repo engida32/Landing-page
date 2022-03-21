@@ -5,15 +5,29 @@ import desktop2 from '../asset/img/mac.jpg'
 import AnimatedShape from './AnimatedShape';
 const Container = styled.div`
 display:flex;
+  @media only screen and (max-width:480px) {
+    flex-direction: column;
+    padding: 30px 20px;
+}
 `
 const Left = styled.div`
 width: 50%;
+ @media only screen and (max-width:480px) {
+    display : none;
+}
+
  `
 const Right = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+   @media only screen and (max-width:480px) {
+    /* display : none; */
+    width: 100%;
+}
+
+
  `
 const Image = styled.img`
 padding-top:12px;
@@ -25,6 +39,9 @@ background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%);
  `
 const Title = styled.span`
 font-size: 70px;
+   @media only screen and (max-width:480px) {
+  font-size: 40px;
+}
 `
 
 const Subtitle = styled.span`

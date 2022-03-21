@@ -4,23 +4,41 @@ import mac from '../asset/img/mac.jpg'
 import desktop from '../asset/img/pc-desktop.jpg'
 const Container = styled.div`
     height:calc( 100vh - 60px);
-    display:flex`
+    display:flex;
+@media only screen and (max-width:480px) {
+flex-direction: column;
+}
+    `
 const Left = styled.div`
 width:60%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+@media only screen and (max-width:480px) {
+width: 100%;
+height: 100%;
+}
 `
 const Title = styled.h1`
 width: 60%;
 font-size: 60px;
+@media only screen and (max-width:480px) {
+    font-size: 40px;
+    width: 100%;
+
+}
 `
 const Description = styled.p`
 margin-top: 20px;
 width: 60%;
 font-size: 20px;
 display:flex;
+@media only screen and (max-width:480px) {
+    /* font-size: 20px;  */
+    width: 100%;
+
+}
 `
 const Info = styled.div`
 width:60%;
@@ -28,6 +46,13 @@ display:flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 50px;
+@media only screen and (max-width:480px) {
+    /* font-size: 20px; */
+    width: 100%;
+    flex-direction: column;
+
+}
+
 `
 const Button = styled.button`
 width: 150px;
@@ -40,6 +65,10 @@ border: none;
 word-spacing: 3px;
 cursor: pointer;
 color: black;
+@media only screen and (max-width:480px) {
+   margin-bottom:20px;
+
+}
 `
 const Contact = styled.div`
 display:flex;
@@ -53,12 +82,14 @@ color: green;
 `
 const ContactText = styled.span`
 color:rebeccapurple;
-
 margin-top: 5px;`
 const Right = styled.div`
 width:60%;
 align-content: center;
 align-items: center;
+@media only screen and (max-width:480px) {
+    display:none;
+}
 `
 
 const Image = styled.img`

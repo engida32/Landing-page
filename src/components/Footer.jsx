@@ -18,11 +18,18 @@ display: flex ;
 padding: 0;
 margin: 0;
 list-style: none;
+
+
 `
 const ListItem = styled.li`
 margin-right:20px`
 const Copyright = styled.span`
-margin-right:10px
+margin-right:10px;
+
+@media only screen and (max-width:480px) {
+margin-right: 10px;
+font-size: 14px;
+}
 `
 
 

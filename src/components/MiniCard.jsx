@@ -9,6 +9,9 @@ align-items: center;
 flex-direction: column ;
 -webkit-box-shadow: -5px 1px 17px 22px #F8E2A5;
 box-shadow: -5px 1px 17px 22px #DBCDA9;
+   @media only screen and (max-width:480px) {
+width: 50px;
+}
 `
 const Image = styled.img`
 width: 20px;
@@ -16,6 +19,9 @@ width: 20px;
 const Text = styled.h2`
 margin-top: 10px;
 text-align: center;
+   @media only screen and (max-width:480px) {
+font-size: 13px;
+}
 `
 const MiniCard = () => {
     return (

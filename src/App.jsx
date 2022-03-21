@@ -9,9 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 const Container = styled.div`
   height: 100vh;
-/* margin: 0; */
   overflow: hidden;
-  /* padding-top:0px; */
   position: relative;
 `;
 
@@ -53,8 +51,9 @@ color: darkblue;
 padding-left: 201px;
   text-decoration: solid underline cadetblue 8px;
   color: crimson;
-
 `
+
+const smallScreen = window.screen.width <= 480 ? true : false;
 function App() {
   return (<>
 
@@ -70,7 +69,7 @@ function App() {
     </Container>
     <Container>
       <Service />
-      <ServiceShape />
+      {!smallScreen && <ServiceShape />}
     </Container>
     <Container>
       <Title>CHOOSE YOUR PLAN </Title>
