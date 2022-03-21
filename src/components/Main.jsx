@@ -62,8 +62,7 @@ align-items: center;
 `
 
 const Image = styled.img`
-background: linear-gradient(crimson, pink);
-
+background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #eba08b 100%);
 border-bottom-left-radius:22%;
 border-top-left-radius: 14%;
 background-color: white;
