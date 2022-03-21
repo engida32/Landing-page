@@ -12,8 +12,8 @@ const Price = () => {
     return (
         <Container>
             <PriceCard price='10' type='Basic' />
-            <PriceCard price='10' type='Premium' />
-            <PriceCard price='10' type='Advanced' />
+            <PriceCard price='20' type='Premium' />
+            <PriceCard price='30' type='Advanced' />
         </Container>
     )
 }
