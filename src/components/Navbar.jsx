@@ -15,7 +15,7 @@ const SWrapper =styled(
   display: 'flex',
   justifyContent: 'space-between',
   alignItem: 'center',
-       background: 'linear-gradient(99deg, white 0%, #ebf08b 100%)'
+  background: 'linear-gradient(99deg, white 0%, #ebf08b 100%)'
 
 });
  

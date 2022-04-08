@@ -29,9 +29,9 @@ background-color:green;
 top:200px;
 left: -90px;
 z-index: -1;
-animation: rectanle 10s linear alternate infinite;
+animation: rectangle 10s linear alternate infinite;
 
-@keyframes rectanle {
+@keyframes rectangle {
     to{
         transform: translate(90vw,-90vh)
     }
