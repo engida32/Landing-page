@@ -1,8 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-const Container = styled.div`
- height: 60px;
-  `;
+import { Box } from '@mui/material';
+import { styled as Styled2 } from '@mui/system';
+const StyledContainer = Styled2(Box,{})({
+    height:'100px' 
+});
+// const Container = styled.div`
+//  height: 60px;
+//   `;
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
@@ -58,7 +63,7 @@ z-index: 1;
  cursor: pointer;
 `;
 const Navbar = () => {
-    return (<Container >
+    return (<StyledContainer >
         <Wrapper>
             <Left>
                 <Logo>
@@ -77,7 +82,7 @@ const Navbar = () => {
                 JOIN US
             </Button>
         </Wrapper>
-    </Container>
+    </StyledContainer>
     );
 };
 
