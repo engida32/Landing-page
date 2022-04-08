@@ -1,89 +1,119 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Box } from '@mui/material';
-import { styled as Styled2 } from '@mui/system';
-const StyledContainer = Styled2(Box,{})({
-    height:'100px' 
+ import { Box, createTheme } from '@mui/material';
+import {styled   } from '@mui/system';
+const Container =styled(
+  Box,
+  {}
+)({
+  height: '100px',
 });
-// const Container = styled.div`
-//  height: 60px;
-//   `;
-const Wrapper = styled.div`
-    padding: 10px 20px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    background: linear-gradient(99deg, white 0%, #eba08b 100%);
-`;
-const Left = styled.div`
-width: 60%;
-align-items: center;
-display: flex;
-justify-content: space-between;
+const SWrapper =styled(
+  Box,
+  {}
+)({
+  padding: '10px 20px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItem: 'center',
+       background: 'linear-gradient(99deg, white 0%, #ebf08b 100%)'
 
-`;
-const Menu = styled.ul`
-display: flex;
-list-style: none;
-@media only screen and (max-width:480px) {
-    display:none;
-}
+});
+ 
+const SLeft =styled(
+  Box,
+  {}
+)({
+  width: '60%',
+  alignItem: 'center',
+  display: 'flex',
+  justifyContent: 'space-between',
+ 
+});
+ 
+const SMenu =styled(
+  'ul',
+  {}
+)({
+  display: 'flex',
+  listStyle: 'none',
+});
+ 
 
-`;
-const MenuItem = styled.li`
-
-margin-right: 32px;
-font-size: 25px;
-font-weight: inherit;
- color: black;
- cursor: pointer;
-
-`;
-
-const Logo = styled.div`
-font-weight: italic;
-font-family: 'Playfair Display';
-font-size: 37px;
-text-decoration: underline blanchedalmond ;
-cursor: pointer;
-`;
-const Button = styled.button`
-border: 2px solid gray;
-width: 150px;
-height: 60px;
-z-index: 1;
- /* padding:  19px 15px; */
- margin-bottom: 4px;
- /* margin-top: -20px; */
- align-self: flex-end;
- background-color: blueviolet;
- color: white;
- font-weight: bold;
- border-radius: 10px;
- cursor: pointer;
-`;
+const SMenuItem=styled('li',{})({
+    marginRight:'32px',
+    fontSize:'25px',
+    fontWeight:800,
+    color:'black',
+    cursor:'pointer',
+    backgroundColor:'transparent',
+    '&:hover': {
+        backgroundColor: '#ccfffc',    
+        border:'none',
+        borderRadius:'10px',
+        transform: 'translate(-10%, -10%)',
+         
+        }
+});
+ 
+const SLogo=styled('div',{})({
+    fontSize:'37px',
+    fontWeight:'italic',
+    fontFamily:'Playfair Display',
+    cursor:'pointer',
+    backgroundColor:'transparent',
+    '&:hover': {
+        backgroundColor: '#ccfffc',    
+        border:'none',
+        borderRadius:'6px',
+        padding:'5px 4px 10px 2px',
+     
+        }
+});
+ 
+const SButton=styled('button',{})({
+    border:' 2px solid gray',
+    width: '150px',
+    height: '60px',
+    zIndex: 1,
+    marginBottom: '4px',
+    alignSelf: 'flex-end',
+    backgroundColor: 'blueviolet',
+    color: 'white',
+    fontWeight: 'bold',
+    borderRadius: '10px',
+    cursor: 'pointer',
+    '&:hover': {
+        backgroundColor: 'lightgray',    
+ 
+                     
+        }
+}); 
 const Navbar = () => {
-    return (<StyledContainer >
-        <Wrapper>
-            <Left>
-                <Logo>
-                    HOME
-                </Logo>
-                <Menu>
-                    <MenuItem>Home</MenuItem>
-                    <MenuItem>Features</MenuItem>
-                    <MenuItem>Service</MenuItem>
-                    <MenuItem>Pricing</MenuItem>
-                    <MenuItem>Contact</MenuItem>
-                </Menu>
-            </Left>
+  const theme = createTheme();
+  return (
+    <Container>
+      <SWrapper>
+        <SLeft sx={{}}>
+          <SLogo>HOME</SLogo>
+          <SMenu
+            sx={{
+              [theme.breakpoints.down('md')]: {
+                display: 'none',
+              },
+            }}
+          >
+            <SMenuItem>Home</SMenuItem>
+            <SMenuItem>Features</SMenuItem>
+            <SMenuItem>Service</SMenuItem>
+            <SMenuItem>Pricing</SMenuItem>
+            <SMenuItem>Contact</SMenuItem>
+          </SMenu>
+        </SLeft>
 
-            <Button>
-                JOIN US
-            </Button>
-        </Wrapper>
-    </StyledContainer>
-    );
+        <SButton>JOIN US</SButton>
+      </SWrapper>
+    </Container>
+  );
 };
 
 export default Navbar;
