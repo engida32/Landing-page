@@ -3,16 +3,19 @@ import { IconButton } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { goToTop } from '../scrollTo';
- const Container = styled.div`
-  height: 10%;
-  background-color: #333;
-  color: lightgray;
-`;
-const Wrapper = styled.div`
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-`;
+ const Container = styled('div',{})({
+   height: '10vh',
+   backgroundColor: '#333',
+   color: 'lightgray'
+    
+  });
+const Wrapper = styled('div',{})({
+  
+  padding: '20px',
+  display: 'flex',
+  justifyContent: 'space-between',
+ 
+});
 const List = styled.ul`
   display: flex;
   padding: 0;

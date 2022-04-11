@@ -4,19 +4,13 @@ import { styled as styled2 } from '@mui/system';
 import { useForm } from 'react-hook-form';
 import { Box } from '@mui/material';
 import { theme } from '../theme/theme';
-// const useStyles = makeStyles({
-//     Leftform: {
-//       backgroundColor: 'red',
-
-//     },
-//   });
+ 
 const LeftForm = styled2(
   'div',
   {}
 )({
   height: '100%',
-  width: 'auto',
-  display: 'flex',
+   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
   margin: '10px',
@@ -37,7 +31,7 @@ const RightForm = styled2(
   justifyContent: 'space-between',
 });
 const Button = styled2(
-  'buttom',
+  'button',
   {}
 )({
   border: 'none',
@@ -66,7 +60,7 @@ const Input = styled2(
   margin: '10px',
   borderRadius: '12px',
   // @media only screen and (max-width:480px) {
-  //   padding: 5px;
+  //   paddinautoPlayg: 5px;
   // }
 });
 const TextArea = styled2(
@@ -108,6 +102,8 @@ export default function App() {
       <LeftForm
         sx={{
           [theme.breakpoints.down('md')]: {
+            height: '50%',
+            marginRight: 0,
             alignItems: 'center',
             alignContent: 'center',
           },
@@ -138,7 +134,11 @@ export default function App() {
           {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
         />
       </LeftForm>
-      <RightForm>
+      <RightForm sx={{
+         [theme.breakpoints.down('md')]: {
+          height: '50%',
+        },
+      }}>
         <TextArea
           type="text"
           placeholder="your message"

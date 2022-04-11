@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material';
     breakpoints: {
       values: {
         xs: 0,
-        sm: 480,
+        sm: 510,
         md: 900,
         lg: 1200,
         xl: 1536,

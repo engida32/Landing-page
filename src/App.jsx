@@ -8,9 +8,15 @@ import Service from './components/Service';
 import Price from './components/Price';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-const Container = styled.div`
+import { theme } from './theme/theme';
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // import { useRef } from 'react';
+const Container = styled.div`import { theme } from './theme/theme';
+
   height: 100vh;
-  overflow: hidden;
+ max-width:100vw;
+  // overflow: hidden;
   position: relative;
 `;
 
@@ -48,41 +54,64 @@ const PriceShape = styled.div`
   background-color: crimson;
 `;
 const Title = styled.h1`
-font-size: 42px;
-color: darkblue;
-padding-left: 201px;
+  font-size: 42px;
+  color: darkblue;
+  padding-left: 201px;
   text-decoration: solid underline cadetblue 8px;
-  color: crimson;
 `;
 
 const smallScreen = window.screen.width <= 480 ? true : false;
-function App() {
-  return (<>
+function App(props) {
+  // const scrollDownF = () => {
+  //     window.scrollTo({
+  //       top: featureSectcion.current.offsetTop,
+  //       behavior: 'smooth',
+  //     });
+  //   };
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="feature" element={<Feature />} />
+          <Route path="Service" element={<Service />} />
+          <Route path="about" element={<Contact />} />
+        </Routes>
 
-    <Container>
-      <Navbar />
-      <Main />
-      <IntoShape />
-    </Container>
-    <Container>
-      <Feature />
-      <FeatureShape />
+        <Container>
+          <Navbar />
+          <Main />
+          <IntoShape />
+        </Container>
+        <Container id="feature">
+          <Feature />
+          <FeatureShape />
+        </Container>
+        <Container id="service">
+          <Service />
+          {!smallScreen && <ServiceShape />}
+        </Container>
+        <Container id="price">
+          <Title
+            sx={{
+              [theme.breakpoints.down('sm')]: {
+                fontSize: '20px',
+                color:'dark'
+              },
+            }}
+          >
+            CHOOSE YOUR PLAN 
+          </Title>
+          <Price />
+          <PriceShape />
+        </Container>
+        <Container id="contact">
+          <Contact />
+        </Container>
 
-    </Container>
-    <Container>
-      <Service />
-      {!smallScreen && <ServiceShape />}
-    </Container>
-    <Container>
-      <Title>CHOOSE YOUR PLAN </Title>
-      <Price />
-      <PriceShape />
-    </Container>
-    <Container>
-      <Contact />
-      <Footer />
-    </Container>
-  </>);
+        <Footer />
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
