@@ -5,7 +5,7 @@ import phone from '../asset/phone.png';
 import UseForn from './UseForn';
 import { styled  } from '@mui/system';
 import { theme } from '../theme/theme';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const Container = styled(
  Box,
@@ -47,7 +47,7 @@ const Form = styled(
 });
 
 const Title = styled(
-  'h1',
+  Typography,
   {}
 )({
   marginTop: '0px',
@@ -108,9 +108,10 @@ const Text = styled(
   fontSize: '20px',
   fontStyle: 'italic',
   marginRight: '15px',
-  // @media only screen and (max-width: 480px) {
-  //     font-size: 12px;
-  // }
+
+  [theme.breakpoints.down('md')]: {
+    fontSize: '12px'
+  },
 });
 
 const Contact = () => {
@@ -128,14 +129,18 @@ const Contact = () => {
           [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             justifyContent: 'space-between',
-
  
-            //to be fixed
           },
         }}
       >
         <FormContainer>
-          <Title>
+          <Title 
+          
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              margin: '30px'
+            },
+          }}>
           <br /> GET IN TOUCH !
           </Title>
           <Form sx={{

@@ -19,6 +19,12 @@ const LeftForm = styled(
   // @media only screen and (max-width:480px) {
   //  height: 50%;
   //  margin-right:0p
+ 
+    [theme.breakpoints.down('md')]: {
+      minHheight: '50%',
+      // backgroundColor:'red',
+    },
+ 
 });
 const RightForm = styled(
   'div',
@@ -69,14 +75,19 @@ const TextArea = styled(
 )({
   borderRadius: '10px',
   border: 'solid 2px crimson',
-  width: '200px',
+  minWidth: '200px',
   height: '60%',
   padding: '30px',
 
-  //      @media only screen and (max-width:480px) {
-  //  margin-top: 20px;
-
-  //  }
+ 
+ 
+     
+    [theme.breakpoints.down('md')]: {
+      // minHheight: '50%',
+      mt:'20px'
+      // backgroundColor:'red',
+    },
+ 
 });
 
 const SelectContainer = styled(
@@ -88,7 +99,7 @@ const SelectContainer = styled(
   textAlign: 'center',
   padding: '0px',
 });
-export default function App() {
+export default function Form() {
   const {
     register,
     handleSubmit,
