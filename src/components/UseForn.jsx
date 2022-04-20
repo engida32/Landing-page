@@ -1,11 +1,11 @@
 import React from 'react';
-import { styled as styled2 } from '@mui/system';
+import { styled } from '@mui/system';
 
 import { useForm } from 'react-hook-form';
 import { Box } from '@mui/material';
 import { theme } from '../theme/theme';
  
-const LeftForm = styled2(
+const LeftForm = styled(
   'div',
   {}
 )({
@@ -20,7 +20,7 @@ const LeftForm = styled2(
   //  height: 50%;
   //  margin-right:0p
 });
-const RightForm = styled2(
+const RightForm = styled(
   'div',
   {}
 )({
@@ -30,7 +30,7 @@ const RightForm = styled2(
   flexDirection: 'column',
   justifyContent: 'space-between',
 });
-const Button = styled2(
+const Button = styled(
   'button',
   {}
 )({
@@ -50,7 +50,7 @@ const Button = styled2(
   // }
 });
 
-const Input = styled2(
+const Input = styled(
   'input',
   {}
 )({
@@ -63,7 +63,7 @@ const Input = styled2(
   //   paddinautoPlayg: 5px;
   // }
 });
-const TextArea = styled2(
+const TextArea = styled(
   'textarea',
   {}
 )({
@@ -79,7 +79,7 @@ const TextArea = styled2(
   //  }
 });
 
-const SelectContainer = styled2(
+const SelectContainer = styled(
   Box,
   {}
 )({

@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import styled from 'styled-components';
-import { styled as styled2 } from '@mui/system';
+import {styled} from '@mui/system';
+// import { styled } from '@mui/system';
 import { theme } from '../theme/theme';
 import { Box } from '@mui/material';
 import { Button } from '@mui/material';
+import { createTheme } from '@mui/material';
 
-const Container = styled2(
+const Container = styled(
   Box,
   {}
 )({
@@ -18,23 +19,25 @@ const Container = styled2(
   flexDirection: 'column',
   alignItems: 'center',
   padding: '20px',
-
-  // @media only screen and (max-width:480px) {
-  //     margin-right: 0;
-  //     margin-bottom: 10px;
-  //     padding: 10px;
-  //     height: 80%;
-
-  // }
+ 
+ 
+  
+    [createTheme().breakpoints.down('md')]: {
+      marginRight: 0,
+          marginBottom: '10px',
+           padding: '10px',
+          // minHeight: '80%'
+    },
+ 
 });
-const PriceContainer = styled2(
+const PriceContainer = styled(
   Box,
   {}
 )({
   display: 'flex',
   alignItems: 'center',
 });
-const Price = styled2(
+const Price = styled(
   'span',
   {}
 )({
@@ -53,18 +56,18 @@ const Type = styled(
   color: 'crimson',
   backgroundolor: 'white',
   borderRadius: '20px',
-  // @media only screen and (max-width: 480px) {
-  //     display: none;
-  // }
+  [createTheme().breakpoints.down('md')]: {
+  display:'none'
+  },
 });
-const List = styled2(
+const List = styled(
   'ul',
   {}
 )({
   listStyle: ' none',
 });
 
-const ListItem = styled2(
+const ListItem = styled(
   'li',
   {}
 )({
@@ -73,6 +76,10 @@ const ListItem = styled2(
   //   margin: 10px;
   //   font-size: 10px;
   // }
+  [createTheme().breakpoints.down('md')]: {
+     margin:' 10px',
+   fontSize: '10px'
+    },
 });
 
 const MButton = styled(
@@ -98,8 +105,8 @@ const PriceCard = ({ price, type }) => {
     <>
       <Container
         sx={{
-          [theme.breakpoints.down('md')]: {
-            height: '80%',
+          [createTheme().breakpoints.down('md ')]: {
+            maxHeight: '80%',
             mr: 0,
             mb: '10px',
             p: '10px',
@@ -123,7 +130,7 @@ const PriceCard = ({ price, type }) => {
         <Type
           sx={{
             [theme.breakpoints.down('md')]: {
-              backgroundColor:'red'
+              // backgroundColor:'red'
               //TODO: display should be non
               //FIXME:  - fix on small screen
               //TO should be display to none on small screen
@@ -161,7 +168,7 @@ const PriceCard = ({ price, type }) => {
               },
             }}
           >
-            50+ Prebuilt Website{' '}
+            50+ Prebuilt Website
           </ListItem>
           <ListItem
             sx={{
@@ -171,7 +178,7 @@ const PriceCard = ({ price, type }) => {
               },
             }}
           >
-            Premium Plugin{' '}
+            Premium Plugin
           </ListItem>
         </List>
         <MButton

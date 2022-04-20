@@ -17,7 +17,7 @@ const Left2 = styled(
   Box,
   {}
 )({
-  width: '60%',
+  minWidth: '60%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -35,7 +35,7 @@ const Title2 = styled(
   'h1',
   {}
 )({
-  width: '60%',
+  minWidth: '60%',
   fontSize: '60px',
 });
 
@@ -44,7 +44,7 @@ const Description = styled(
   {}
 )({
   marginTop: '20px',
-  width: '60%',
+  minWidth: '60%',
   fontSize: '20px',
   display: 'flex',
 });
@@ -111,7 +111,7 @@ const ImageContainer=styled('img',{})({
   alignItems:'center',
   alignContent:'center',
   width:'99%',
-  height:'100%'
+  maxHeight:'100%'
 });
 
  
@@ -140,7 +140,7 @@ const Main = () => {
         <Description
         sx={{
           [theme.breakpoints.only('md')]: {
-            width: '100%',
+            minWidth: '100%',
             backgroundColor:'red'
 
           },
@@ -169,8 +169,8 @@ const Main = () => {
               },
             }}
           >
-            {' '}
-            Start Project{' '}
+            
+            Start Project
           </StyledButton>
           <Contact>
             <Span
@@ -189,7 +189,7 @@ const Main = () => {
                 mt: '5px',
               }}
             >
-              For any Question or concerns{' '}
+              For any Question or concerns
             </Span>
           </Contact>
         </Info>

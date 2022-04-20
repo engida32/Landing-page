@@ -3,11 +3,12 @@ import React from 'react';
 import PriceCard from './PriceCard';
 import { styled } from '@mui/system';
 import { theme } from '../theme/theme';
+import { createTheme } from '@mui/material';
 const Container = styled(
   'div',
   {}
 )({
-  height: '100%',
+  // maxHeight: '100%',
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
@@ -18,6 +19,10 @@ const Container = styled(
   //     height:70%
 
   // }
+  [createTheme().breakpoints.down('md')]: {
+    flexDirection: 'column',
+      maxHeight:'70%'
+  },
 });
 const Price = () => {
   return (
@@ -25,9 +30,9 @@ const Price = () => {
       sx={{
         [theme.breakpoints.down('md')]: {
           flexDirection: 'column',
-          // margin:'5px',
+          margin:'5px',
           mr: 0,
-          // p:'10px',
+          p:'10px',
           // mb:'10px'
         },
       }}

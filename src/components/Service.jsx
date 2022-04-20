@@ -12,16 +12,21 @@ const Container = styled(
 )({
  
   display: 'flex',
-  height:'100%'
+  height:'100%',
   // @media only screen and (max-width:480px) {
   //     flex-direction: column;
   // }`;
+   
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column'
+    },
+ 
 });
 const Left = styled(
   'div',
   {}
 )({
-  width: '50%',
+  minWidth: '50%',
   position: 'relative',
   // @media only screen and (max-width:480px) {
   //     display:none;
@@ -31,7 +36,7 @@ const Right = styled(
   'div',
   {}
 )({
-  width: '50%',
+  minWidth: '50%',
   // @media only screen and (max-width:480px) {
   //     width: 100%;
   // }
@@ -42,8 +47,8 @@ const Image = styled(
 )({
   // display: `${(props) => props.open && 'none'}`,
   marginTop: ' 21px',
-  height: '100%',
-  width: '100%',
+  minHeight: '100%',
+  minWidth: '100%',
 });
 const Wrapper = styled(
   'div',
@@ -115,8 +120,8 @@ const Modal = styled(
   'div',
   {}
 )({
-  width: '100vw',
-  height: '100vh',
+  minWidth: '100vw',
+  minHeight: '100vh',
   position: 'absolute',
   top: 0,
   left: 0,
@@ -146,7 +151,7 @@ const Service = () => {
           flexDirection: 'column',
           alignContent:'center',
            alignItems:'center',
-          backgroundColor:'red'
+          // backgroundColor:'red'
          
         },
       }}
@@ -154,13 +159,16 @@ const Service = () => {
       <Left
         sx={{
           [theme.breakpoints.down('md')]: {
-            display: 'none',
+            // display: 'none',
           },
         }}
       >
         <Image
           sx={{
             display: `${(props) => props.open && 'none'}`,
+            [theme.breakpoints.down('md')]: {
+              display: 'none',
+            },
           }}
           open={!open}
           src={mac}
@@ -179,16 +187,17 @@ const Service = () => {
       <Right
         sx={{
           [theme.breakpoints.down('md')]: {
-            width: '100%',
+            minWidth: '100%',
           },
         }}
       >
         <Wrapper
           sx={{
-            [theme.breakpoints.down('sm')]: {
-              width: '100%',
-              padding: '100%',
-            },
+            // [theme.breakpoints.down('md')]: {
+            //   Width: '100%',
+            //   padding: '100%',
+            //   display:'none'
+            // },
           }}
         >
           <Title variant="h3"> Simple process to start with us</Title>
@@ -220,7 +229,7 @@ const Service = () => {
             sx={{
               display: `${(props) => !props.open && 'none'}`,
               [theme.breakpoints.down('md')]: {
-                width: '100%',
+                minWidth: '100%',
               },
             }}
             open={open}

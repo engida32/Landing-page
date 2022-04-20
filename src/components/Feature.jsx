@@ -2,36 +2,42 @@ import React from 'react';
 import styled from 'styled-components';
 import desktop2 from '../asset/img/mac.jpg';
 import AnimatedShape from './AnimatedShape';
-const Container = styled.div`
-display:flex;
-  @media only screen and (max-width:480px) {
-    flex-direction: column;
-    padding: 30px 20px;
-}
-`;
+import { styled as styled2 } from '@mui/system';
+import { createTheme } from '@mui/material';
+
+const Container = styled2('div')(()=>({
+    minHeight:'100vh',
+    maxWidth:'100vw',   
+    display:'flex',
+        [ createTheme().breakpoints.down('sm')]: {
+            // flexDirection: 'column',
+             padding: '30px 20px'
+   
+        }
+}));
 const Left = styled.div`
-width: 50%;
+max-width: 50%;
  @media only screen and (max-width:480px) {
     display : none;
 }
 
  `;
 const Right = styled.div`
-  width: 50%;
+  min-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
    @media only screen and (max-width:480px) {
     /* display : none; */
-    width: 100%;
+    max-width: 100%;
 }
 
 
  `;
 const Image = styled.img`
 padding-top:12px;
- width: 624px;
- height: 700px;
+ max-width: 624px;
+//  height: 700px;
  border-radius: 21px;
  border-color: inherit;
 background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%);
@@ -44,8 +50,7 @@ font-size: 70px;
 `;
 
 const Subtitle = styled.span`
-font-style: italic;
-font-style: italic;
+ font-style: italic;
 font-size: 25px;
 margin-top: 30px;
 `;
@@ -58,7 +63,7 @@ font-stretch: italic;
 margin-top: 30px;
 `;
 const Button = styled.button`
-width: 150px;
+// width: 150px;
 border: none;
 padding: 15px 20px;
 color: white;
