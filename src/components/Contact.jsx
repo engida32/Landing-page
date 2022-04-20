@@ -11,9 +11,9 @@ const Container = styled(
  Box,
   {}
 )({
-  height: '100%',
-  
-  display:'flex',
+  minHeight: '100%',
+  minWidth:'100vh',
+  // display:'flex',
   backgroundImage:
     ' url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?t=st=1647859942~exp=1647860542~hmac=2f655f1264b54a2833b61a89db5ce09edcc7e861b78a75e51ec1332495831cf5&w=1380")',
 });
@@ -21,7 +21,7 @@ const Wrapper = styled(
   'div',
   {}
 )({
-  height: '100%',
+  minHeight: '100%',
   padding: '20px',
   display: 'flex',
   alignItems: 'center',
@@ -146,6 +146,7 @@ const Contact = () => {
           <Form sx={{
              [theme.breakpoints.down('md')]: {
             flexDirection:'column',
+            margin: '10px'
            
 
             },

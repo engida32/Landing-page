@@ -11,6 +11,7 @@ import Feature from '../components/Feature';
 import Service from '../components/Service';
 import Contact from '../components/Contact';
 import { theme } from '../theme/theme';
+import { Box } from '@mui/material';
 const Container = styled.div`
  
   height: 100vh;
@@ -90,11 +91,27 @@ const Home = () => {
           <Price />
           <PriceShape />
         </Container>
-        <Container id="contact">
+        <Box id="contact"
+        sx={{
+            minHeight:'50%',
+            display:'flex',
+            flexDirection:'column',
+            justifyContent:'space-around'
+        }}
+        >
+          
           <Contact />
-        </Container>
+        </Box>
+        <Box
+        
+        sx=
+        {{
+            mt:12
+        }}>
 
         <Footer />
+        </Box>
+
     </>
   );
 };

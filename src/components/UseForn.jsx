@@ -75,7 +75,7 @@ const TextArea = styled(
 )({
   borderRadius: '10px',
   border: 'solid 2px crimson',
-  minWidth: '200px',
+  width: '200px',
   height: '60%',
   padding: '30px',
 
