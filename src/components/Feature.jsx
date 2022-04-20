@@ -4,25 +4,28 @@ import desktop2 from '../asset/img/mac.jpg';
 import AnimatedShape from './AnimatedShape';
 import { styled as styled2 } from '@mui/system';
 import { createTheme } from '@mui/material';
-
+// import { styled as styled2 } from '@mui/system';
+import { theme } from '../theme/theme';
 const Container = styled2('div')(()=>({
     minHeight:'100vh',
     minWidth:'100vw',   
     display:'flex',
     justifyContent:'center',
-        [ createTheme().breakpoints.down('sm')]: {
+        [ createTheme().breakpoints.down('md')]: {
             // flexDirection: 'column',
              padding: '30px 20px'
    
         }
 }));
-const Left = styled.div`
-min-width: 50%;
- @media only screen and (max-width:480px) {
-    display : none;
-}
+const Left = styled('div')(()=>({
 
- `;
+    minWidth: '50%',
+    [theme.breakpoints.down('md')]: {
+        display:'none'
+      },
+}));
+
+
 const Right = styled.div`
   min-width: 50%;
   display: flex;
@@ -35,14 +38,15 @@ const Right = styled.div`
 
 
  `;
-const Image = styled.img`
-padding-top:12px;
- max-width: 624px;
-min-height: 700px;
- border-radius: 21px;
- border-color: inherit;
-background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%);
- `;
+const Image = styled2('img')(()=>({
+    paddingTop:'12px',
+ maxWidth: '624px',
+minHeight: '700px',
+ borderRadius: '21px',
+ borderColor: 'inherit',
+background: 'linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%)',
+}));
+ 
 const Title = styled.span`
 font-size: 70px;
    @media only screen and (max-width:480px) {
@@ -81,10 +85,15 @@ const Feature = () => {
             <Left>
                 <Image
                     src={desktop2}
+                    sx={{
+                        [createTheme().breakpoints.down('md')]: {
+                            display:'none'
+                        },
+                      }}
                 />
             </Left>
             <Right>
-                <Title>
+                <Title >
                     <b>GOOD </b>  Design  <br />
                     <b>GOOD </b>  Business
                     <br />
