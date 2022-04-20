@@ -7,8 +7,9 @@ import { createTheme } from '@mui/material';
 
 const Container = styled2('div')(()=>({
     minHeight:'100vh',
-    maxWidth:'100vw',   
+    minWidth:'100vw',   
     display:'flex',
+    justifyContent:'center',
         [ createTheme().breakpoints.down('sm')]: {
             // flexDirection: 'column',
              padding: '30px 20px'
@@ -16,7 +17,7 @@ const Container = styled2('div')(()=>({
         }
 }));
 const Left = styled.div`
-max-width: 50%;
+min-width: 50%;
  @media only screen and (max-width:480px) {
     display : none;
 }
@@ -37,7 +38,7 @@ const Right = styled.div`
 const Image = styled.img`
 padding-top:12px;
  max-width: 624px;
-//  height: 700px;
+min-height: 700px;
  border-radius: 21px;
  border-color: inherit;
 background: linear-gradient(139deg, rgba(242, 230, 218, 0.5) 0%, #FFE3DC 100%);

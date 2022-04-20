@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Search from '../asset/search.png';
 const Container = styled.div`
-  width: 100px;
+  min-width: 100px;
   padding: 20px;
   display: flex;
   align-items: center;

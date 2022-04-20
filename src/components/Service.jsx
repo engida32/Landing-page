@@ -47,8 +47,8 @@ const Image = styled(
 )({
   // display: `${(props) => props.open && 'none'}`,
   marginTop: ' 21px',
-  minHeight: '100%',
-  minWidth: '100%',
+  maxHeight: '100%',
+  maxWidth: '100%',
 });
 const Wrapper = styled(
   'div',
@@ -56,7 +56,7 @@ const Wrapper = styled(
 )({
   padding: '50px',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column',  
   // @media only screen and (max-width:480px) {
   //     padding: 20px;
   //     width: 100%;
@@ -120,7 +120,7 @@ const Modal = styled(
   'div',
   {}
 )({
-  minWidth: '100vw',
+  maxWidth: '100vw',
   minHeight: '100vh',
   position: 'absolute',
   top: 0,
@@ -167,7 +167,7 @@ const Service = () => {
           sx={{
             display: `${(props) => props.open && 'none'}`,
             [theme.breakpoints.down('md')]: {
-              display: 'none',
+              // display: 'none',
             },
           }}
           open={!open}
@@ -193,11 +193,11 @@ const Service = () => {
       >
         <Wrapper
           sx={{
-            // [theme.breakpoints.down('md')]: {
-            //   Width: '100%',
-            //   padding: '100%',
-            //   display:'none'
-            // },
+            [theme.breakpoints.down('md')]: {
+              minWidth: '100%',
+              // padding: '100%',
+              display:'none'
+            },
           }}
         >
           <Title variant="h3"> Simple process to start with us</Title>
