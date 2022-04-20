@@ -6,6 +6,7 @@ import Main from '../components/Main';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 import Price from '../components/Price';
+// import { styled as styled2 } from '@mui/system';
 
 import Feature from '../components/Feature';
 import Service from '../components/Service';
@@ -34,7 +35,6 @@ const IntoShape = styled.div`
   clip-path: polygon(29% 0, 100% 0, 100% 87%, 55% 100%);
   background-color: #3333;
 `;
-
 const FeatureShape = styled.div`
   ${Shape}
   clip-path: polygon(0 0, 55% 0%, 33% 100%, 0 100%);
@@ -93,7 +93,7 @@ const Home = () => {
         </Container>
         <Box id="contact"
         sx={{
-            minHeight:'50%',
+            // maxHeight:'50%',
             display:'flex',
             flexDirection:'column',
             justifyContent:'space-around'
@@ -106,7 +106,7 @@ const Home = () => {
         
         sx=
         {{
-            mt:12
+            // mt:12
         }}>
 
         <Footer />

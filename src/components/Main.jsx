@@ -13,7 +13,7 @@ const Container = Styled(
   height: 'calc( 100vh - 60px)',
   display: 'flex',
 });
-const Left2 = styled(
+const Left = styled(
   Box,
   {}
 )({
@@ -75,7 +75,7 @@ const StyledButton = styled(
   Button,
   {}
 )({
-  width: '150px',
+  minWidth: '150px',
   height: '80px',
   padding: '22px',
   border: 'none',
@@ -99,7 +99,7 @@ const Right = styled(
   {}
 )({
   display:'flex',
-  width: '60%',
+  maxWidth: '60%',
   alignItems: 'center',
   alignContent: 'center',
 });
@@ -111,7 +111,7 @@ const ImageContainer=styled('img',{})({
   alignItems:'center',
   alignContent:'center',
   width:'99%',
-  maxHeight:'100%'
+  minHeight:'90%'
 });
 
  
@@ -125,7 +125,7 @@ const Main = () => {
         },
       }}
     >
-      <Left2 variant="h1">
+      <Left variant="h1">
         <Title2
           sx={{
             [theme.breakpoints.down('md')]: {
@@ -193,7 +193,7 @@ const Main = () => {
             </Span>
           </Contact>
         </Info>
-      </Left2>
+      </Left>
       <Right
         sx={{
           [theme.breakpoints.down('md')]: {
